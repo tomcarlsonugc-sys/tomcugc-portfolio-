@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tom Carlson — UGC Creator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f4f1ea;        /* warm paper canvas */
+    --card:#ffffff;
+    --ink:#16140f;          /* near-black ink */
+    --ink-2:#5c584d;        /* muted body */
+    --ink-3:#928d80;        /* tertiary */
+    --line:rgba(22,20,15,.13);
+    --line-2:rgba(22,20,15,.22);
+    --accent:#2b4cff;       /* electric cobalt */
+    --accent-2:#1c39e0;
+    --accent-soft:rgba(43,76,255,.08);
+    --display:"Bricolage Grotesque", system-ui, sans-serif;
+    --sans:"Space Grotesk", system-ui, sans-serif;
+    --container:1240px;
+    --gut:clamp(20px,5vw,76px);
+    --ease:cubic-bezier(.16,1,.3,1);
+    --r:22px;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;
+       -webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  ::selection{background:var(--accent);color:#fff;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{width:100%;max-width:var(--container);margin-inline:auto;padding-inline:var(--gut);}
+
+  .kicker{font-family:var(--sans);font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+          color:var(--accent);margin:0;display:inline-flex;align-items:center;gap:10px;}
+  .kicker.muted{color:var(--ink-3);}
+  .body{font-size:clamp(16px,1.3vw,19px);color:var(--ink-2);margin:0;text-wrap:pretty;}
+  .accent{color:var(--accent);}
+
+  /* nav */
+  .nav{position:fixed;inset:0 0 auto 0;z-index:40;display:flex;align-items:center;justify-content:space-between;
+       padding:18px var(--gut);transition:background .4s var(--ease),border-color .4s var(--ease),box-shadow .4s var(--ease);
+       border-bottom:1px solid transparent;}
+  .nav.scrolled{background:rgba(244,241,234,.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-color:var(--line);}
+  .brand{font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:-.01em;display:flex;align-items:center;gap:9px;white-space:nowrap;}
+  .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--accent);flex:none;}
+  .nav-mid{display:none;gap:28px;}
+  .nav-mid a{font-size:13px;font-weight:500;color:var(--ink-2);transition:color .3s;}
+  .nav-mid a:hover{color:var(--ink);}
+  @media(min-width:920px){.nav-mid{display:flex;}}
+  .nav-right{display:flex;align-items:center;gap:16px;}
+  .switch{display:inline-flex;border:1px solid var(--line-2);border-radius:999px;overflow:hidden;padding:3px;gap:2px;}
+  .switch a{font-weight:600;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:7px 12px;border-radius:999px;color:var(--ink-2);transition:background .3s,color .3s;}
+  .switch a.on{background:var(--accent);color:#fff;}
+  .nav-cta{font-weight:600;font-size:12px;letter-spacing:.04em;color:var(--ink);border-bottom:1.5px solid var(--accent);padding-bottom:2px;white-space:nowrap;}
+  @media(max-width:600px){.nav-cta{display:none;}}
+
+  /* hero */
+  .hero{padding-top:clamp(132px,20vh,210px);padding-bottom:clamp(48px,8vh,96px);}
+  .hero-top{display:flex;align-items:center;gap:14px;margin-bottom:clamp(26px,4vw,44px);flex-wrap:wrap;}
+  .hero h1{font-family:var(--display);font-weight:700;font-size:clamp(46px,8.4vw,118px);line-height:.98;
+           letter-spacing:-.03em;margin:0;max-width:15ch;text-wrap:balance;}
+  .hero-foot{display:grid;grid-template-columns:1.3fr 1fr;gap:var(--gut);align-items:end;margin-top:clamp(34px,5vw,60px);}
+  @media(max-width:820px){.hero-foot{grid-template-columns:1fr;gap:34px;}}
+  .hero-sub{max-width:48ch;font-size:clamp(16px,1.5vw,20px);color:var(--ink-2);}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;}
+  .hero-meta{display:flex;gap:clamp(20px,3vw,44px);justify-content:flex-end;flex-wrap:wrap;}
+  @media(max-width:820px){.hero-meta{justify-content:flex-start;}}
+  .hero-meta .m .k{font-family:var(--display);font-weight:700;font-size:clamp(28px,3vw,40px);line-height:1;letter-spacing:-.02em;}
+  .hero-meta .m .v{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-top:8px;}
+
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-weight:600;font-size:13px;
+       letter-spacing:.06em;padding:16px 26px;border-radius:999px;border:1.5px solid transparent;cursor:pointer;
+       transition:background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease),transform .3s var(--ease);}
+  .btn .arr{transition:transform .3s var(--ease);}
+  .btn:hover .arr{transform:translateX(5px);}
+  .btn-solid{background:var(--accent);color:#fff;}
+  .btn-solid:hover{background:var(--accent-2);transform:translateY(-2px);}
+  .btn-ghost{border-color:var(--line-2);color:var(--ink);}
+  .btn-ghost:hover{border-color:var(--ink);}
+
+  /* brands row */
+  .brands{border-block:1px solid var(--line);padding-block:34px;}
+  .brands-inner{display:flex;align-items:center;gap:clamp(20px,4vw,56px);flex-wrap:wrap;justify-content:center;}
+  .brands .b{font-family:var(--display);font-weight:600;font-size:clamp(16px,1.8vw,22px);color:var(--ink);opacity:.55;
+             transition:opacity .3s,color .3s;letter-spacing:-.01em;}
+  .brands .b:hover{opacity:1;color:var(--accent);}
+  .brands .lbl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);width:100%;text-align:center;margin-bottom:22px;}
+
+  section{position:relative;}
+  .pad{padding-block:clamp(64px,11vw,140px);}
+  .sechead{margin-bottom:clamp(36px,5vw,60px);max-width:60ch;}
+  .sechead .idx{font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;}
+  .sechead h2{font-family:var(--display);font-weight:700;font-size:clamp(32px,4.6vw,62px);line-height:1.0;letter-spacing:-.025em;margin:0;text-wrap:balance;}
+  .sechead p{margin:18px 0 0;}
+
+  /* work */
+  .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,28px);}
+  @media(max-width:880px){.work-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:520px){.work-grid{grid-template-columns:1fr 1fr;gap:14px;}}
+  .reel{display:flex;flex-direction:column;gap:16px;}
+  .reel .frame{position:relative;aspect-ratio:9/16;border-radius:var(--r);overflow:hidden;background:var(--card);
+               box-shadow:0 18px 40px rgba(22,20,15,.10);transition:transform .45s var(--ease),box-shadow .45s var(--ease);}
+  .reel:hover .frame{transform:translateY(-8px);box-shadow:0 30px 60px rgba(22,20,15,.16);}
+  .reel image-slot{width:100%;height:100%;}
+  .reel .tagn{position:absolute;top:12px;left:12px;z-index:3;font-weight:600;font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+              color:var(--ink);background:rgba(255,255,255,.86);backdrop-filter:blur(6px);padding:6px 10px;border-radius:999px;pointer-events:none;}
+  .reel .meta{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding-inline:4px;}
+  .reel .meta .b{font-family:var(--display);font-weight:600;font-size:16px;letter-spacing:-.01em;}
+  .reel .meta .t{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);white-space:nowrap;}
+
+  /* about */
+  .about{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,90px);align-items:center;}
+  @media(max-width:820px){.about{grid-template-columns:1fr;gap:40px;}}
+  .about-portrait{aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;box-shadow:0 24px 50px rgba(22,20,15,.14);}
+  .about-portrait image-slot{width:100%;height:100%;}
+  .about .lede{font-family:var(--display);font-weight:600;font-size:clamp(24px,2.8vw,38px);line-height:1.12;letter-spacing:-.02em;margin:0 0 24px;text-wrap:balance;}
+  .about-copy{display:flex;flex-direction:column;gap:20px;max-width:52ch;}
+
+  /* approach cards */
+  .ap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,24px);}
+  @media(max-width:820px){.ap-grid{grid-template-columns:1fr;}}
+  .ap{background:var(--card);border-radius:var(--r);padding:clamp(26px,3vw,38px);display:flex;flex-direction:column;gap:14px;
+      box-shadow:0 14px 34px rgba(22,20,15,.07);transition:transform .4s var(--ease);}
+  .ap:hover{transform:translateY(-5px);}
+  .ap .n{font-family:var(--display);font-weight:700;font-size:30px;color:var(--accent);line-height:1;letter-spacing:-.02em;}
+  .ap h3{font-family:var(--display);font-weight:600;font-size:21px;letter-spacing:-.01em;margin:6px 0 0;}
+  .ap p{margin:0;font-size:15px;color:var(--ink-2);}
+
+  /* verticals */
+  .chips{display:flex;flex-wrap:wrap;gap:12px;}
+  .chip{border:1.5px solid var(--line-2);border-radius:999px;padding:13px 24px;font-weight:500;font-size:15px;background:transparent;
+        transition:border-color .3s,color .3s,background .3s;}
+  .chip:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft);}
+
+  /* services */
+  .svc{border-top:1px solid var(--line-2);}
+  .svc .row{display:grid;grid-template-columns:54px 1fr auto;align-items:center;gap:20px;padding:26px 4px;
+            border-bottom:1px solid var(--line);transition:padding-left .35s var(--ease),background .35s var(--ease);}
+  .svc .row:hover{padding-left:16px;background:var(--accent-soft);}
+  .svc .row .num{font-family:var(--display);font-weight:700;font-size:18px;color:var(--ink-3);}
+  .svc .row:hover .num{color:var(--accent);}
+  .svc .row .nm{font-family:var(--display);font-weight:600;font-size:clamp(20px,2.4vw,30px);letter-spacing:-.02em;}
+  .svc .row .tg{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);}
+  @media(max-width:600px){.svc .row{grid-template-columns:34px 1fr;}.svc .row .tg{display:none;}}
+
+  /* contact */
+  .contact-card{background:var(--ink);color:var(--paper);border-radius:clamp(24px,3vw,40px);padding:clamp(44px,7vw,96px) var(--gut);text-align:center;}
+  .contact-card .kicker{color:#8fa0ff;justify-content:center;}
+  .contact-card h2{font-family:var(--display);font-weight:700;font-size:clamp(40px,7vw,96px);line-height:.98;letter-spacing:-.03em;margin:20px 0 0;text-wrap:balance;}
+  .contact-card .sub{max-width:46ch;margin:24px auto 0;color:rgba(244,241,234,.7);font-size:clamp(16px,1.4vw,19px);}
+  .contact-card .cta{margin-top:40px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .contact-card .btn-ghost{border-color:rgba(244,241,234,.3);color:var(--paper);}
+  .contact-card .btn-ghost:hover{border-color:var(--paper);}
+  .contact-links{display:flex;gap:clamp(22px,4vw,56px);justify-content:center;flex-wrap:wrap;margin-top:56px;padding-top:34px;border-top:1px solid rgba(244,241,234,.18);}
+  .contact-links a{display:flex;flex-direction:column;gap:7px;align-items:center;}
+  .contact-links .k{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,241,234,.5);}
+  .contact-links .v{font-family:var(--display);font-weight:600;font-size:19px;transition:color .3s;}
+  .contact-links a:hover .v{color:#8fa0ff;}
+
+  footer{padding:30px var(--gut);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+  footer .c{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);}
+
+
+  .reel-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#15110c;}
+  .reel-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:4;width:62px;height:62px;border:0;border-radius:999px;cursor:pointer;
+    background:rgba(0,0,0,.5);backdrop-filter:blur(6px);color:#fff;display:flex;align-items:center;justify-content:center;transition:opacity .25s var(--ease),transform .25s var(--ease);}
+  .reel-play:hover{transform:translate(-50%,-50%) scale(1.07);background:rgba(0,0,0,.65);}
+  .frame.playing .reel-play{opacity:0;pointer-events:none;}
+  .reel .frame{cursor:pointer;}
+  .portrait-img{width:100%;height:100%;object-fit:cover;display:block;}
+
+  /* entrance: transform-only (never hides content) */
+  .rise{animation:riseIn .7s var(--ease) both;}
+  @keyframes riseIn{from{transform:translateY(16px);}to{transform:translateY(0);}}
+  @media(prefers-reduced-motion:reduce){.rise{animation:none;}}
+</style>
+</head>
+<body data-screen-label="Minimal / Editorial">
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#top" class="brand"><span class="dot"></span>Tom Carlson</a>
+  <div class="nav-mid">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="nav-right">
+    <a class="nav-cta" href="/cdn-cgi/l/email-protection#a4d0cbc9c7c5d6c8d7cbcad1c3c7e4c3c9c5cdc88ac7cbc9" data-email="1">Get in touch</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top" data-screen-label="Hero">
+  <div class="wrap">
+    <div class="hero-top">
+      <span class="kicker">UGC Creator</span>
+      <span class="kicker muted">Los Angeles, CA</span>
+    </div>
+    <h1 class="rise">UGC that turns scrollers into <span class="accent">buyers.</span></h1>
+    <div class="hero-foot">
+      <div>
+        <p class="hero-sub">I'm Tom Carlson — a UGC creator and former engineer who builds hooks that grab attention and CTAs that convert it. Health, wellness, fitness, sports and tech.</p>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="/cdn-cgi/l/email-protection#89fde6e4eae8fbe5fae6e7fceeeac9eee4e8e0e5a7eae6e4b6fafcebe3eceafdb4dccecaacbbb9d9fbe6e3eceafdacbbb9c0e7f8fce0fbf0" data-email="1" data-subject="UGC%20Project%20Inquiry">Email me <span class="arr">→</span></a>
+          <a class="btn btn-ghost" href="#work">See the work</a>
+        </div>
+      </div>
+      <div class="hero-meta">
+        <div class="m"><div class="k">100+</div><div class="v">Brands</div></div>
+        <div class="m"><div class="k">Video</div><div class="v">+ Photo + Rights</div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- BRANDS -->
+<section class="brands" data-screen-label="Brands">
+  <div class="wrap">
+    <div class="brands-inner">
+      <span class="lbl">Trusted by</span>
+      <span class="b">C4 Energy</span><span class="b">True Classic</span><span class="b">Fresh Clean Threads</span><span class="b">Harry's</span><span class="b">Wahl</span><span class="b">Joymode</span><span class="b">Great Big Canvas</span><span class="b">Tiege Hanley</span><span class="b">HackMotion</span><span class="b">Brickell</span>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section class="pad" id="work" data-screen-label="Work">
+  <div class="wrap">
+    <div class="sechead">
+      <div class="idx">01 — Selected work</div>
+      <h2>Recent content.</h2>
+      <p class="body">Unboxing, reviews, testimonials and demos across health, fitness, sports and tech.</p>
+    </div>
+    <div class="work-grid">
+      <div class="reel"><div class="frame"><span class="tagn">Unboxing</span><video class="reel-video" src="assets/reel-1.mp4#t=0.1" muted loop playsinline preload="metadata"></video><button class="reel-play" aria-label="Play video" data-i="1"></button></div><div class="meta"><span class="b">True Classic</span><span class="t">Apparel</span></div></div>
+      <div class="reel"><div class="frame"><span class="tagn">Review</span><video class="reel-video" src="assets/reel-2.mp4#t=0.1" muted loop playsinline preload="metadata"></video><button class="reel-play" aria-label="Play video" data-i="2"></button></div><div class="meta"><span class="b">C4 Energy</span><span class="t">Fitness</span></div></div>
+      <div class="reel"><div class="frame"><span class="tagn">Demo</span><video class="reel-video" src="assets/reel-3.mp4#t=0.1" muted loop playsinline preload="metadata"></video><button class="reel-play" aria-label="Play video" data-i="3"></button></div><div class="meta"><span class="b">HackMotion</span><span class="t">Sports tech</span></div></div>
+      <div class="reel"><div class="frame"><span class="tagn">Testimonial</span><video class="reel-video" src="assets/reel-4.mp4#t=0.1" muted loop playsinline preload="metadata"></video><button class="reel-play" aria-label="Play video" data-i="4"></button></div><div class="meta"><span class="b">Brickell Men's Skincare</span><span class="t">Wellness</span></div></div>
+      <div class="reel"><div class="frame"><span class="tagn">Demo</span><video class="reel-video" src="assets/reel-5.mp4#t=0.1" muted loop playsinline preload="metadata"></video><button class="reel-play" aria-label="Play video" data-i="5"></button></div><div class="meta"><span class="b">Joymode</span><span class="t">Health</span></div></div>
+      <div class="reel"><div class="frame"><span class="tagn">Review</span><video class="reel-video" src="assets/reel-6.mp4#t=0.1" muted loop playsinline preload="metadata"></video><button class="reel-play" aria-label="Play video" data-i="6"></button></div><div class="meta"><span class="b">Harry's</span><span class="t">Grooming</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="pad" id="about" data-screen-label="About">
+  <div class="wrap about">
+    <div class="about-portrait"><img class="portrait-img" src="assets/portrait.jpg" alt="Tom Carlson, UGC creator"></div>
+    <div>
+      <div class="idx" style="font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;">02 — About</div>
+      <p class="lede">An engineer turned creator who solves every brief for one thing: the sale.</p>
+      <div class="about-copy">
+        <p class="body">Based in Los Angeles, I'm a fitness fanatic and tech junkie who spent years as an engineer. I approach every brand the way I approached engineering — find the real problem, then solve it.</p>
+        <p class="body">For UGC, that means understanding exactly what your product does for the customer: opening on a hook that earns the next two seconds, and closing on a CTA that makes people want to buy right now.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="pad" id="approach" data-screen-label="Approach" style="padding-top:0;">
+  <div class="wrap">
+    <div class="sechead"><div class="idx">03 — How I work</div><h2>Made to be watched. Built to convert.</h2></div>
+    <div class="ap-grid">
+      <div class="ap"><div class="n">01</div><h3>Engineer's mindset</h3><p>I solve for the problem, not the post. Every concept starts with what your product actually does for the customer.</p></div>
+      <div class="ap"><div class="n">02</div><h3>Scroll-stopping hooks</h3><p>The first two seconds decide everything. I open on tension, curiosity, or payoff so viewers stop and stay.</p></div>
+      <div class="ap"><div class="n">03</div><h3>CTAs that convert</h3><p>Content made to be acted on — clear, compelling calls to action that move your audience to buy now.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VERTICALS -->
+<section class="pad" id="verticals" data-screen-label="Verticals" style="padding-top:0;">
+  <div class="wrap">
+    <div class="sechead"><div class="idx">04 — Verticals</div><h2>Categories I create in.</h2></div>
+    <div class="chips">
+      <span class="chip">Health</span><span class="chip">Wellness</span><span class="chip">Fitness</span><span class="chip">Sports</span><span class="chip">Tech</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="pad" id="services" data-screen-label="Services" style="padding-top:0;">
+  <div class="wrap">
+    <div class="sechead"><div class="idx">05 — Services</div><h2>What I deliver.</h2></div>
+    <div class="svc">
+      <div class="row"><span class="num">01</span><span class="nm">Organic Ads</span><span class="tg">Posted to my TikTok · X · YouTube</span></div>
+      <div class="row"><span class="num">02</span><span class="nm">Paid Targeted Campaign Ads</span><span class="tg">Built to convert</span></div>
+      <div class="row"><span class="num">03</span><span class="nm">Script Reading &amp; Voiceovers</span><span class="tg">Hooks · VO · delivery</span></div>
+      <div class="row"><span class="num">04</span><span class="nm">UGC Photography</span><span class="tg">Studio &amp; lifestyle</span></div>
+      <div class="row"><span class="num">05</span><span class="nm">Monthly Retainer</span><span class="tg">Always-on content</span></div>
+      <div class="row"><span class="num">06</span><span class="nm">Custom Packages</span><span class="tg">Tailored to your campaign</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="pad" id="contact" data-screen-label="Contact" style="padding-top:0;">
+  <div class="wrap">
+    <div class="contact-card">
+      <span class="kicker">Let's work together</span>
+      <h2>Let's make<br>something that sells.</h2>
+      <p class="sub">Tell me about your product and your goal. I'll bring the hook, the script, and the CTA — and I want your audience to buy immediately.</p>
+      <div class="cta">
+        <a class="btn btn-solid" href="/cdn-cgi/l/email-protection#5723383a3436253b24383922303417303a363e3b7934383a682422353d3234236a0210147265670725383d3234237265671e3926223e252e" data-email="1" data-subject="UGC%20Project%20Inquiry">Email me <span class="arr">→</span></a>
+        <a class="btn btn-ghost" href="https://instagram.com/tomcugc" target="_blank" rel="noopener">Instagram @tomcugc</a>
+      </div>
+      <div class="contact-links">
+        <a href="/cdn-cgi/l/email-protection#80f4efede3e1f2ecf3efeef5e7e3c0e7ede1e9ecaee3efed" data-email="1" data-email-text="1"><span class="k">Email</span><span class="v"><span class="__cf_email__" data-cfemail="d5a1bab8b6b4a7b9a6babba0b2b695b2b8b4bcb9fbb6bab8">[email&#160;protected]</span></span></a>
+        <a href="https://instagram.com/tomcugc" target="_blank" rel="noopener"><span class="k">Instagram</span><span class="v">@tomcugc</span></a>
+        <a href="https://tiktok.com/@tomcugc" target="_blank" rel="noopener"><span class="k">TikTok</span><span class="v">@tomcugc</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="brand"><span class="dot"></span>Tom Carlson</span>
+  <span class="c">UGC Creator · Los Angeles · Rates upon request</span>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  const nav=document.getElementById('nav');
+  const onScroll=()=>nav.classList.toggle('scrolled',window.scrollY>20);
+  onScroll();addEventListener('scroll',onScroll,{passive:true});
+</script>
+<script>
+  document.querySelectorAll('.reel-play').forEach(btn=>{
+    const frame=btn.closest('.frame');
+    const v=frame.querySelector('video');
+    btn.innerHTML='<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M7 5v14l12-7z"/></svg>';
+    btn.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();v.muted=false;v.play();});
+    frame.addEventListener('click',()=>{ if(v.paused){v.muted=false;v.play();} else {v.pause();} });
+    v.addEventListener('play',()=>frame.classList.add('playing'));
+    v.addEventListener('pause',()=>frame.classList.remove('playing'));
+    v.addEventListener('ended',()=>frame.classList.remove('playing'));
+  });
+</script>
+<script>
+  // Force the real email to render even if the host scrambles it ("[email protected]")
+  (function(){
+    var e = ['tomcarlsonugc','gmail.com'].join('@');
+    document.querySelectorAll('a[data-email]').forEach(function(a){
+      var sub = a.getAttribute('data-subject');
+      a.setAttribute('href', 'mailto:' + e + (sub ? ('?subject=' + sub) : ''));
+      if (a.hasAttribute('data-email-text')) {
+        var v = a.querySelector('.v');
+        if (v) v.textContent = e;
+      }
+    });
+  })();
+</script>
+</body>
+</html>

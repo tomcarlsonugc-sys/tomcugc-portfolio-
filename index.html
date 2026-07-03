@@ -239,12 +239,12 @@
       <p class="body">Unboxing, reviews, testimonials and demos across health, fitness, sports and tech.</p>
     </div>
     <div class="work-grid">
-      <div class="reel"><div class="frame"><span class="tagn">Unboxing</span><video class="reel-video" src="assets/reel-1.mp4#t=0.1" muted loop playsinline preload="metadata"></video><button class="reel-play" aria-label="Play video" data-i="1"></button></div><div class="meta"><span class="b">True Classic</span><span class="t">Apparel</span></div></div>
-      <div class="reel"><div class="frame"><span class="tagn">Review</span><video class="reel-video" src="assets/reel-2.mp4#t=0.1" muted loop playsinline preload="metadata"></video><button class="reel-play" aria-label="Play video" data-i="2"></button></div><div class="meta"><span class="b">C4 Energy</span><span class="t">Fitness</span></div></div>
-      <div class="reel"><div class="frame"><span class="tagn">Demo</span><video class="reel-video" src="assets/reel-3.mp4#t=0.1" muted loop playsinline preload="metadata"></video><button class="reel-play" aria-label="Play video" data-i="3"></button></div><div class="meta"><span class="b">HackMotion</span><span class="t">Sports tech</span></div></div>
-      <div class="reel"><div class="frame"><span class="tagn">Testimonial</span><video class="reel-video" src="assets/reel-4.mp4#t=0.1" muted loop playsinline preload="metadata"></video><button class="reel-play" aria-label="Play video" data-i="4"></button></div><div class="meta"><span class="b">Brickell Men's Skincare</span><span class="t">Wellness</span></div></div>
-      <div class="reel"><div class="frame"><span class="tagn">Demo</span><video class="reel-video" src="assets/reel-5.mp4#t=0.1" muted loop playsinline preload="metadata"></video><button class="reel-play" aria-label="Play video" data-i="5"></button></div><div class="meta"><span class="b">Joymode</span><span class="t">Health</span></div></div>
-      <div class="reel"><div class="frame"><span class="tagn">Review</span><video class="reel-video" src="assets/reel-6.mp4#t=0.1" muted loop playsinline preload="metadata"></video><button class="reel-play" aria-label="Play video" data-i="6"></button></div><div class="meta"><span class="b">Harry's</span><span class="t">Grooming</span></div></div>
+      <div class="reel"><div class="frame" data-yt="fwS62sqkDPY"><span class="tagn">Unboxing</span><img class="reel-video" src="https://img.youtube.com/vi/fwS62sqkDPY/hqdefault.jpg" alt="True Classic unboxing reel"><button class="reel-play" aria-label="Play video" data-i="1"></button></div><div class="meta"><span class="b">True Classic</span><span class="t">Apparel</span></div></div>
+      <div class="reel"><div class="frame" data-yt="AzY7zRnJDfw"><span class="tagn">Review</span><img class="reel-video" src="https://img.youtube.com/vi/AzY7zRnJDfw/hqdefault.jpg" alt="C4 Energy review reel"><button class="reel-play" aria-label="Play video" data-i="2"></button></div><div class="meta"><span class="b">C4 Energy</span><span class="t">Fitness</span></div></div>
+      <div class="reel"><div class="frame" data-yt="8LYrafOOZX0"><span class="tagn">Demo</span><img class="reel-video" src="https://img.youtube.com/vi/8LYrafOOZX0/hqdefault.jpg" alt="HackMotion demo reel"><button class="reel-play" aria-label="Play video" data-i="3"></button></div><div class="meta"><span class="b">HackMotion</span><span class="t">Sports tech</span></div></div>
+      <div class="reel"><div class="frame" data-yt="kNQFTRF8CXc"><span class="tagn">Testimonial</span><img class="reel-video" src="https://img.youtube.com/vi/kNQFTRF8CXc/hqdefault.jpg" alt="Brickell Men's Skincare testimonial reel"><button class="reel-play" aria-label="Play video" data-i="4"></button></div><div class="meta"><span class="b">Brickell Men's Skincare</span><span class="t">Wellness</span></div></div>
+      <div class="reel"><div class="frame" data-yt="XPQn6LBbJXA"><span class="tagn">Demo</span><img class="reel-video" src="https://img.youtube.com/vi/XPQn6LBbJXA/hqdefault.jpg" alt="Joymode demo reel"><button class="reel-play" aria-label="Play video" data-i="5"></button></div><div class="meta"><span class="b">Joymode</span><span class="t">Health</span></div></div>
+      <div class="reel"><div class="frame" data-yt="4dbMqDD7kAs"><span class="tagn">Review</span><img class="reel-video" src="https://img.youtube.com/vi/4dbMqDD7kAs/hqdefault.jpg" alt="Harry's review reel"><button class="reel-play" aria-label="Play video" data-i="6"></button></div><div class="meta"><span class="b">Harry's</span><span class="t">Grooming</span></div></div>
     </div>
   </div>
 </section>
@@ -332,15 +332,25 @@
   onScroll();addEventListener('scroll',onScroll,{passive:true});
 </script>
 <script>
-  document.querySelectorAll('.reel-play').forEach(btn=>{
-    const frame=btn.closest('.frame');
-    const v=frame.querySelector('video');
+  document.querySelectorAll('.frame[data-yt]').forEach(frame=>{
+    const btn = frame.querySelector('.reel-play');
+    const videoId = frame.dataset.yt;
     btn.innerHTML='<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M7 5v14l12-7z"/></svg>';
-    btn.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();v.muted=false;v.play();});
-    frame.addEventListener('click',()=>{ if(v.paused){v.muted=false;v.play();} else {v.pause();} });
-    v.addEventListener('play',()=>frame.classList.add('playing'));
-    v.addEventListener('pause',()=>frame.classList.remove('playing'));
-    v.addEventListener('ended',()=>frame.classList.remove('playing'));
+    function playVideo(e){
+      if(e){ e.preventDefault(); e.stopPropagation(); }
+      if(frame.querySelector('iframe')) return;
+      const iframe = document.createElement('iframe');
+      iframe.className = 'reel-video';
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&playsinline=1&rel=0`;
+      iframe.frameBorder = '0';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allowFullscreen = true;
+      const img = frame.querySelector('img.reel-video');
+      if (img) img.replaceWith(iframe);
+      frame.classList.add('playing');
+    }
+    btn.addEventListener('click', playVideo);
+    frame.addEventListener('click', playVideo);
   });
 </script>
 <script>

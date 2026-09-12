@@ -4,7 +4,7 @@
   --card:#ffffff;
   --ink:#16140f;
   --ink-2:#5c584d;
-  --ink-3:#928d80;
+  --ink-3:#726e64;        /* darkened from #928d80 to meet WCAG AA contrast */
   --line:rgba(22,20,15,.13);
   --line-2:rgba(22,20,15,.22);
   --accent:#2b4cff;
@@ -33,6 +33,7 @@ img{max-width:100%;display:block;}
 .kicker.muted{color:var(--ink-3);}
 .body{font-size:clamp(16px,1.3vw,19px);color:var(--ink-2);margin:0;text-wrap:pretty;}
 .accent{color:var(--accent);}
+a.accent{text-decoration:underline;text-underline-offset:3px;}
 
 /* nav */
 .nav{position:fixed;inset:0 0 auto 0;z-index:40;display:flex;align-items:center;justify-content:space-between;

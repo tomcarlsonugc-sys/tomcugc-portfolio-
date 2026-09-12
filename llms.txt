@@ -11,10 +11,10 @@ Tom specializes in scroll-stopping hooks and conversion-focused CTAs for organic
 - [About](https://tomcugc.com/about.html): Background, approach, and content categories (health, wellness, fitness, sports, tech).
 - [Services](https://tomcugc.com/services.html): Full service list, and an FAQ covering what UGC is, pricing, usage rights/whitelisting, industries served, and process.
 - [Testimonials](https://tomcugc.com/testimonials.html): Client testimonials (in progress).
-- [Contact](https://tomcugc.com/contact.html): Email tomcarlsonugc@gmail.com, Instagram @tomcugc, TikTok @tomcugc.
+- [Contact](https://tomcugc.com/contact.html): Email hello@tomcugc.com, Instagram @tomcugc, TikTok @tomcugc.
 
 ## Contact
 
-Email: tomcarlsonugc@gmail.com
+Email: hello@tomcugc.com
 Instagram: https://instagram.com/tomcugc
 TikTok: https://tiktok.com/@tomcugc

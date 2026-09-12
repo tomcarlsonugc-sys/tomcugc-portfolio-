@@ -47,7 +47,7 @@
 
   // Keeps the real address out of the raw page source to cut down on scraper spam,
   // while still rendering a normal mailto link for real visitors.
-  const e = ['tomcarlsonugc', 'gmail.com'].join('@');
+  const e = ['hello', 'tomcugc.com'].join('@');
   document.querySelectorAll('a[data-email]').forEach((a) => {
     const sub = a.getAttribute('data-subject');
     a.setAttribute('href', 'mailto:' + e + (sub ? '?subject=' + sub : ''));

@@ -9,7 +9,8 @@ Tom specializes in scroll-stopping hooks and conversion-focused CTAs for organic
 - [Home](https://tomcugc.com/): Overview, brand list, and quick links to work, services and contact.
 - [Work](https://tomcugc.com/work.html): Portfolio of UGC video examples (unboxings, reviews, demos, testimonial-style content) for named brands.
 - [About](https://tomcugc.com/about.html): Background, approach, and content categories (health, wellness, fitness, sports, tech).
-- [Services](https://tomcugc.com/services.html): Full service list, and an FAQ covering what UGC is, pricing, usage rights/whitelisting, industries served, and process.
+- [Services](https://tomcugc.com/services.html): Full service list, and an FAQ covering what UGC is, usage rights/whitelisting, industries served, and process.
+- [Pricing](https://tomcugc.com/pricing.html): What drives UGC pricing (deliverables, usage rights, turnaround, retainers vs one-off), plus a pricing-focused FAQ. No public price list — rates are quoted per project.
 - [Testimonials](https://tomcugc.com/testimonials.html): Client testimonials (in progress).
 - [Contact](https://tomcugc.com/contact.html): Email hello@tomcugc.com, Instagram @tomcugc, TikTok @tomcugc.
 

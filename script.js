@@ -45,6 +45,22 @@
     frame.addEventListener('click', playVideo);
   });
 
+  document.querySelectorAll('.testi-carousel').forEach((carousel) => {
+    const slides = Array.from(carousel.querySelectorAll('.testi-slide'));
+    const prev = carousel.querySelector('.testi-nav .prev');
+    const next = carousel.querySelector('.testi-nav .next');
+    if (!slides.length) return;
+    let i = slides.findIndex((s) => s.classList.contains('active'));
+    if (i < 0) i = 0;
+    function show(n) {
+      slides[i].classList.remove('active');
+      i = (n + slides.length) % slides.length;
+      slides[i].classList.add('active');
+    }
+    if (prev) prev.addEventListener('click', () => show(i - 1));
+    if (next) next.addEventListener('click', () => show(i + 1));
+  });
+
   // Keeps the real address out of the raw page source to cut down on scraper spam,
   // while still rendering a normal mailto link for real visitors.
   const e = ['hello', 'tomcugc.com'].join('@');

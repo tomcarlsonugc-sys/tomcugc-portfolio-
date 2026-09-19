@@ -45,6 +45,21 @@
     frame.addEventListener('click', playVideo);
   });
 
+  document.querySelectorAll('.frame[data-video]').forEach((frame) => {
+    const btn = frame.querySelector('.reel-play');
+    const video = frame.querySelector('video.reel-video');
+    if (btn) btn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M7 5v14l12-7z"/></svg>';
+    function playVideo(e) {
+      if (e) { e.preventDefault(); e.stopPropagation(); }
+      if (!video || frame.classList.contains('playing')) return;
+      video.setAttribute('controls', '');
+      video.play();
+      frame.classList.add('playing');
+    }
+    if (btn) btn.addEventListener('click', playVideo);
+    frame.addEventListener('click', playVideo);
+  });
+
   document.querySelectorAll('.testi-carousel').forEach((carousel) => {
     const slides = Array.from(carousel.querySelectorAll('.testi-slide'));
     const prev = carousel.querySelector('.testi-nav .prev');

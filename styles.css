@@ -281,6 +281,7 @@ footer .fnav a:hover{color:var(--accent);}
 @media(prefers-reduced-motion:reduce){.rise{animation:none;}}
 
 
+.jump-nav-section{padding-block:clamp(28px,4vw,44px);}
 .jump-nav{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;}
 .jump-nav-label{font-family:var(--sans);font-weight:600;font-size:13px;color:var(--ink-3);white-space:nowrap;margin-right:2px;}
 .jump-nav .chip{padding:9px 18px;font-size:14px;display:inline-flex;align-items:center;gap:6px;}

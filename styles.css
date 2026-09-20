@@ -163,7 +163,7 @@ section{position:relative;}
 
 /* verticals */
 .chips{display:flex;flex-wrap:wrap;gap:12px;}
-.chip{border:1.5px solid var(--line-2);border-radius:999px;padding:13px 24px;font-weight:500;font-size:15px;background:transparent;
+.chip{display:inline-flex;align-items:center;border:1.5px solid var(--line-2);border-radius:999px;padding:13px 24px;font-weight:500;font-size:15px;background:transparent;
       transition:border-color .3s,color .3s,background .3s;}
 .chip:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft);}
 

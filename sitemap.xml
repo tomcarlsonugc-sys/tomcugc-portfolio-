@@ -1,10 +1,442 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://tomcugc.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://tomcugc.com/work.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://tomcugc.com/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://tomcugc.com/services.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tomcugc.com/pricing.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tomcugc.com/testimonials.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tomcugc.com/contact.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url><loc>https://tomcugc.com/</loc><lastmod>2026-09-19</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url>
+    <loc>https://tomcugc.com/work.html</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/fwS62sqkDPY/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>True Classic Unboxing UGC</video:title>
+      <video:description>UGC unboxing video for True Classic apparel.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/fwS62sqkDPY</video:player_loc>
+      <video:publication_date>2026-01-01T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/AzY7zRnJDfw/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>C4 Energy Review UGC</video:title>
+      <video:description>UGC review video for C4 Energy fitness supplement.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/AzY7zRnJDfw</video:player_loc>
+      <video:publication_date>2026-01-01T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/8LYrafOOZX0/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>HackMotion Demo UGC</video:title>
+      <video:description>UGC product demo video for HackMotion sports tech.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/8LYrafOOZX0</video:player_loc>
+      <video:publication_date>2026-01-01T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/kNQFTRF8CXc/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Brickell Men's Skincare Testimonial UGC</video:title>
+      <video:description>UGC testimonial-style video for Brickell Men's Skincare.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/kNQFTRF8CXc</video:player_loc>
+      <video:publication_date>2026-01-01T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/XPQn6LBbJXA/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Joymode Demo UGC</video:title>
+      <video:description>UGC demo reel for Joymode health product.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/XPQn6LBbJXA</video:player_loc>
+      <video:publication_date>2026-01-01T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/4dbMqDD7kAs/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Harry's Review UGC</video:title>
+      <video:description>UGC review video for Harry's grooming products.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/4dbMqDD7kAs</video:player_loc>
+      <video:publication_date>2026-01-01T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-rootless-plants-poster.jpg</video:thumbnail_loc>
+      <video:title>Rootless Plants Review UGC</video:title>
+      <video:description>UGC review video for Rootless Plants.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-rootless-plants.mp4</video:content_loc>
+      <video:duration>52</video:duration>
+      <video:publication_date>2026-09-18T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-bgment-poster.jpg</video:thumbnail_loc>
+      <video:title>BGMENT Testimonial UGC</video:title>
+      <video:description>UGC testimonial video for BGMENT curtains.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-bgment.mp4</video:content_loc>
+      <video:duration>47</video:duration>
+      <video:publication_date>2026-09-18T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-badoo-poster.jpg</video:thumbnail_loc>
+      <video:title>Badoo Storytime UGC</video:title>
+      <video:description>Storytime-style narrative ad for the Badoo dating app.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-badoo.mp4</video:content_loc>
+      <video:duration>21</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-ryl-tea-poster.jpg</video:thumbnail_loc>
+      <video:title>Ryl Tea Review UGC</video:title>
+      <video:description>Fridge-stocking review highlighting Ryl Tea's everyday benefits.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-ryl-tea.mp4</video:content_loc>
+      <video:duration>16</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-bodyspec-poster.jpg</video:thumbnail_loc>
+      <video:title>BodySpec Testimonial UGC</video:title>
+      <video:description>In-person testimonial filmed on location during a DEXA body-composition scan.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-bodyspec.mp4</video:content_loc>
+      <video:duration>41</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-palico-coffee-poster.jpg</video:thumbnail_loc>
+      <video:title>Palico Coffee Review UGC</video:title>
+      <video:description>Review of Palico's coffee grinder.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-palico-coffee.mp4</video:content_loc>
+      <video:duration>31</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-waterdrop-poster.jpg</video:thumbnail_loc>
+      <video:title>Waterdrop Review UGC</video:title>
+      <video:description>Review of Waterdrop's countertop reverse osmosis system.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-waterdrop.mp4</video:content_loc>
+      <video:duration>51</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-icon-poster.jpg</video:thumbnail_loc>
+      <video:title>Icon Testimonial UGC</video:title>
+      <video:description>Testimonial-style video for Icon apparel.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-icon.mp4</video:content_loc>
+      <video:duration>50</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-omada-golf-poster.jpg</video:thumbnail_loc>
+      <video:title>Omada Golf Demo UGC</video:title>
+      <video:description>Feature walkthrough of an Omada golf cart.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-omada-golf.mp4</video:content_loc>
+      <video:duration>43</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-luckyfours-poster.jpg</video:thumbnail_loc>
+      <video:title>Luckyfours Review UGC</video:title>
+      <video:description>Review of a Luckyfours watch.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-luckyfours.mp4</video:content_loc>
+      <video:duration>48</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-daily-belts-poster.jpg</video:thumbnail_loc>
+      <video:title>Daily Belts Demo UGC</video:title>
+      <video:description>Styling different belt options from Daily Belts.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-daily-belts.mp4</video:content_loc>
+      <video:duration>30</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-into-the-am-poster.jpg</video:thumbnail_loc>
+      <video:title>Into the AM Review UGC</video:title>
+      <video:description>Review of Into the AM apparel.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-into-the-am.mp4</video:content_loc>
+      <video:duration>54</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-edj-box-opening-poster.jpg</video:thumbnail_loc>
+      <video:title>EDJ Unboxing UGC</video:title>
+      <video:description>Unboxing an EDJ clothing delivery box.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-edj-box-opening.mp4</video:content_loc>
+      <video:duration>66</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-circul-ring-poster.jpg</video:thumbnail_loc>
+      <video:title>Circul Ring Demo UGC</video:title>
+      <video:description>Using the Circul smart ring across different everyday settings.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-circul-ring.mp4</video:content_loc>
+      <video:duration>56</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-qoves-poster.jpg</video:thumbnail_loc>
+      <video:title>Qoves Demo UGC</video:title>
+      <video:description>Walkthrough of Qoves' facial analysis software.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-qoves.mp4</video:content_loc>
+      <video:duration>61</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-qwince-poster.jpg</video:thumbnail_loc>
+      <video:title>Qwince Testimonial UGC</video:title>
+      <video:description>Testimonial-style video wearing Qwince clothing.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-qwince.mp4</video:content_loc>
+      <video:duration>40</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-c4-mango-poster.jpg</video:thumbnail_loc>
+      <video:title>C4 Review UGC</video:title>
+      <video:description>Review of C4's new mango flavor.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-c4-mango.mp4</video:content_loc>
+      <video:duration>22</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-feel-good-chinos-poster.jpg</video:thumbnail_loc>
+      <video:title>Feel Good Review UGC</video:title>
+      <video:description>Review styling Feel Good's new chinos.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-feel-good-chinos.mp4</video:content_loc>
+      <video:duration>25</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-cudis-ring-poster.jpg</video:thumbnail_loc>
+      <video:title>Cudis Ring Demo UGC</video:title>
+      <video:description>Using the Cudis smart ring across different everyday settings.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-cudis-ring.mp4</video:content_loc>
+      <video:duration>56</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-hair-clippers-poster.jpg</video:thumbnail_loc>
+      <video:title>Wahl Demo UGC</video:title>
+      <video:description>Demo of Wahl hair clippers.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-hair-clippers.mp4</video:content_loc>
+      <video:duration>46</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-great-big-canvas-poster.jpg</video:thumbnail_loc>
+      <video:title>Great Big Canvas Unboxing UGC</video:title>
+      <video:description>Unboxing a new canvas print and showing the space before and after.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-great-big-canvas.mp4</video:content_loc>
+      <video:duration>45</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-oracle-poster.jpg</video:thumbnail_loc>
+      <video:title>Oracle Review UGC</video:title>
+      <video:description>Review of Oracle's new software.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-oracle.mp4</video:content_loc>
+      <video:duration>24</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-arculus-poster.jpg</video:thumbnail_loc>
+      <video:title>Arculus Review UGC</video:title>
+      <video:description>Review of the Arculus crypto cold wallet.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-arculus.mp4</video:content_loc>
+      <video:duration>115</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-optim-ring-poster.jpg</video:thumbnail_loc>
+      <video:title>Optim Ring Demo UGC</video:title>
+      <video:description>Using the Optim smart ring across different everyday settings.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-optim-ring.mp4</video:content_loc>
+      <video:duration>77</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-beer-gut-blaster-poster.jpg</video:thumbnail_loc>
+      <video:title>Beer Gut Blaster Demo UGC</video:title>
+      <video:description>Showcasing the Beer Gut Blaster bundle.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-beer-gut-blaster.mp4</video:content_loc>
+      <video:duration>15</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-jo-malone-poster.jpg</video:thumbnail_loc>
+      <video:title>Jo Malone Review UGC</video:title>
+      <video:description>Voiceover review of Jo Malone cologne.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-jo-malone.mp4</video:content_loc>
+      <video:duration>41</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-bfr-cuff-poster.jpg</video:thumbnail_loc>
+      <video:title>BFR Cuff Demo UGC</video:title>
+      <video:description>Using blood flow restriction cuffs and other features at the gym.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-bfr-cuff.mp4</video:content_loc>
+      <video:duration>37</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-retinol-moisturizer-poster.jpg</video:thumbnail_loc>
+      <video:title>Brickell Review UGC</video:title>
+      <video:description>Review of Brickell's retinol moisturizer.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-retinol-moisturizer.mp4</video:content_loc>
+      <video:duration>46</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-advocare-spark-poster.jpg</video:thumbnail_loc>
+      <video:title>AdvoCare Review UGC</video:title>
+      <video:description>Review of AdvoCare Spark with gym b-roll.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-advocare-spark.mp4</video:content_loc>
+      <video:duration>30</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-bear-komplex-belt-poster.jpg</video:thumbnail_loc>
+      <video:title>Bear KompleX Demo UGC</video:title>
+      <video:description>Using a Bear KompleX weightlifting belt at the gym.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-bear-komplex-belt.mp4</video:content_loc>
+      <video:duration>18</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-fifine-m9-poster.jpg</video:thumbnail_loc>
+      <video:title>Fifine Review UGC</video:title>
+      <video:description>Review of the Fifine M9 microphone.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-fifine-m9.mp4</video:content_loc>
+      <video:duration>49</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-harrys-eye-gel-poster.jpg</video:thumbnail_loc>
+      <video:title>Harry's Review UGC</video:title>
+      <video:description>Before-and-after review using Harry's eye gel.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-harrys-eye-gel.mp4</video:content_loc>
+      <video:duration>33</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-framesi-poster.jpg</video:thumbnail_loc>
+      <video:title>Framesi Demo UGC</video:title>
+      <video:description>Styling demo using Trendzi's sea salt hair spray.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-framesi.mp4</video:content_loc>
+      <video:duration>43</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-golfdaddy-poster.jpg</video:thumbnail_loc>
+      <video:title>GolfDaddy Demo UGC</video:title>
+      <video:description>Demo of GolfDaddy's at-home golf simulator.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-golfdaddy.mp4</video:content_loc>
+      <video:duration>60</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-ardur-wipes-poster.jpg</video:thumbnail_loc>
+      <video:title>Ardur Review UGC</video:title>
+      <video:description>Before-and-after showcase of Ardur's shoe wipes.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-ardur-wipes.mp4</video:content_loc>
+      <video:duration>29</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-mixology-poster.jpg</video:thumbnail_loc>
+      <video:title>Mixology Unboxing UGC</video:title>
+      <video:description>Unboxing a Mixology whiskey delivery box.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-mixology.mp4</video:content_loc>
+      <video:duration>34</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-scrubi-poster.jpg</video:thumbnail_loc>
+      <video:title>Scrubi Demo UGC</video:title>
+      <video:description>Voiceover demo cleaning golf clubs with Scrubi's cleaner.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-scrubi.mp4</video:content_loc>
+      <video:duration>38</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-pinned-golf-poster.jpg</video:thumbnail_loc>
+      <video:title>Pinned Demo UGC</video:title>
+      <video:description>Using Pinned's rangefinder on the course.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-pinned-golf.mp4</video:content_loc>
+      <video:duration>48</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-fresh-clean-threads-golf-poster.jpg</video:thumbnail_loc>
+      <video:title>Fresh Clean Threads Review UGC</video:title>
+      <video:description>Wearing Fresh Clean Threads apparel out on the golf course.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-fresh-clean-threads-golf.mp4</video:content_loc>
+      <video:duration>49</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-caddie-wheel-poster.jpg</video:thumbnail_loc>
+      <video:title>Caddie Wheel Demo UGC</video:title>
+      <video:description>Using Caddie Wheel's golf cart wheel on and off the course.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-caddie-wheel.mp4</video:content_loc>
+      <video:duration>53</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-ryde-poster.jpg</video:thumbnail_loc>
+      <video:title>Ryde Demo UGC</video:title>
+      <video:description>Showing three Ryde drinks across different parts of the day.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-ryde.mp4</video:content_loc>
+      <video:duration>20</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://tomcugc.com/assets/reel-manta-mask-poster.jpg</video:thumbnail_loc>
+      <video:title>Manta Sleep Review UGC</video:title>
+      <video:description>Reviewing Manta's sleep mask and sound machine in bed.</video:description>
+      <video:content_loc>https://tomcugc.com/assets/reel-manta-mask.mp4</video:content_loc>
+      <video:duration>59</video:duration>
+      <video:publication_date>2026-09-19T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url><loc>https://tomcugc.com/about.html</loc><lastmod>2026-09-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tomcugc.com/services.html</loc><lastmod>2026-09-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tomcugc.com/pricing.html</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tomcugc.com/testimonials.html</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tomcugc.com/contact.html</loc><lastmod>2026-09-01</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
 </urlset>

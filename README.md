@@ -6,19 +6,19 @@ Static, no-backend website for Tom Carlson's UGC (user-generated content) busine
 
 - `index.html`, `work.html`, `about.html`, `services.html`, `testimonials.html`, `contact.html`, `404.html` — the site's pages
 - `styles.css`, `script.js` — shared styles/behavior across all pages
-- `assets/` — portrait photo and source reel videos (site links to YouTube for playback; raw `.mp4`s kept for reference)
+- `assets/` — portrait photo, self-hosted reel videos (`reel-*.mp4`, compressed to ~1.4 Mbps 720p with faststart) and their poster images
 - `robots.txt`, `sitemap.xml`, `llms.txt` — crawler/SEO/AI-search discoverability files
 - `CNAME` — custom domain for GitHub Pages (`tomcugc.com`)
 - `favicon.svg` — site icon
 
 ## Editing testimonials
 
-`testimonials.html` currently has a placeholder block (no fake quotes). To add a real one, replace the `.testi-placeholder` div with:
+Testimonials live in a `.testi-carousel` on `testimonials.html` (and a shorter one on `index.html`). To add one, add another slide to `.testi-track`:
 
 ```html
-<div class="testi">
+<div class="testi-slide">
   <p class="q">"The actual client quote goes here."</p>
-  <span class="who">Jane Doe, Brand Name</span>
+  <span class="who">Role, Brand</span>
 </div>
 ```
 

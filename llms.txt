@@ -8,6 +8,11 @@ Tom specializes in scroll-stopping hooks and conversion-focused CTAs for organic
 
 - [Home](https://tomcugc.com/): Overview, brand list, and quick links to work, services and contact.
 - [Work](https://tomcugc.com/work.html): Portfolio of UGC video examples (unboxings, reviews, demos, testimonial-style content) for named brands.
+- [Golf UGC](https://tomcugc.com/golf-ugc-creator.html): Golf gear, tech and apparel UGC examples (rangefinders, simulators, swing sensors, carts).
+- [Fitness & Supplement UGC](https://tomcugc.com/fitness-ugc-creator.html): Gym-shot UGC for supplements, energy drinks, lifting gear and health brands.
+- [Tech & Wearables UGC](https://tomcugc.com/tech-ugc-creator.html): Smart ring, gadget, app and software demo/review UGC.
+- [Grooming & Skincare UGC](https://tomcugc.com/grooming-skincare-ugc-creator.html): Men's skincare, fragrance, hair and clipper UGC.
+- [Apparel UGC](https://tomcugc.com/apparel-ugc-creator.html): Men's apparel try-on, unboxing and styling UGC.
 - [About](https://tomcugc.com/about.html): Background, approach, and content categories (health, wellness, fitness, sports, tech).
 - [Services](https://tomcugc.com/services.html): Full service list, and an FAQ covering what UGC is, usage rights/whitelisting, industries served, and process.
 - [Pricing](https://tomcugc.com/pricing.html): What drives UGC pricing (deliverables, usage rights, turnaround, retainers vs one-off), plus a pricing-focused FAQ. No public price list — rates are quoted per project.

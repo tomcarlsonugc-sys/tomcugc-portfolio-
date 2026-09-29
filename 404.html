@@ -11,20 +11,53 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Space+Grotesk:wght@400;500;600;700&display=optional">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Space+Grotesk:wght@400;500;600;700&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Space+Grotesk:wght@400;500;600;700&display=optional" rel="stylesheet"></noscript>
-<link rel="stylesheet" href="styles.css?v=3">
+<link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
-<nav class="nav scrolled" aria-label="Primary">
-  <a href="index.html" class="brand"><span class="dot"></span>Tom Carlson</a>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<nav class="nav" id="nav" aria-label="Primary">
+  <a href="/" class="brand"><span class="dot"></span>Tom Carlson</a>
+  <div class="nav-mid">
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="nav-right">
+    <a class="nav-cta" href="#" data-email="1" data-subject="UGC%20Project%20Inquiry">Get in touch <span class="arr">↗</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><span></span></button>
+  </div>
 </nav>
+<div class="mnav" id="mnav">
+  <a href="work.html">Work</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="testimonials.html">Testimonials</a>
+  <a href="contact.html">Contact</a>
+</div>
+
 <main id="main">
 <header class="pagehead">
   <div class="wrap">
     <div class="idx kicker">404</div>
     <h1>Page not found.</h1>
-    <p class="body">That page doesn't exist. Head back to the <a href="index.html" class="accent">homepage</a>, or see the <a href="work.html" class="accent">work</a>.</p>
+    <p class="body">That page doesn't exist. Head back to the <a href="/" class="accent">homepage</a>, or see the <a href="work.html" class="accent">work</a>.</p>
   </div>
 </header>
 </main>
+
+<footer>
+  <span class="brand"><span class="dot"></span>Tom Carlson</span>
+  <nav class="fnav" aria-label="Footer">
+    <a href="work.html">Work</a><a href="about.html">About</a><a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="testimonials.html">Testimonials</a><a href="contact.html">Contact</a>
+  </nav>
+  <span class="c">UGC Creator · Los Angeles · Rates upon request</span>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

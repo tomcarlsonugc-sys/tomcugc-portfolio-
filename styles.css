@@ -124,6 +124,10 @@ section{position:relative;}
 .work-group{margin-bottom:clamp(40px,6vw,72px);scroll-margin-top:110px;}
 .work-group:last-child{margin-bottom:0;}
 .group-title{margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--line);width:100%;}
+.group-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--line);}
+.group-head .group-name{margin:0;}
+.group-count{font-size:13px;color:var(--ink-3);}
+.group-link{margin-left:auto;font-size:14px;font-weight:600;}
 .work-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,28px);}
 @media(max-width:880px){.work-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:520px){.work-grid{gap:14px;}}

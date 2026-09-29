@@ -4,7 +4,8 @@ Static, no-backend website for Tom Carlson's UGC (user-generated content) busine
 
 ## Structure
 
-- `index.html`, `work.html`, `about.html`, `services.html`, `testimonials.html`, `contact.html`, `404.html` — the site's pages
+- `index.html`, `work.html`, `about.html`, `services.html`, `pricing.html`, `testimonials.html`, `contact.html`, `404.html` — the site's pages
+- `*-ugc-creator.html` — category landing pages (golf, fitness, tech, grooming-skincare, apparel) targeting niche searches; built from the matching `work.html` sections, so update both when adding a video
 - `styles.css`, `script.js` — shared styles/behavior across all pages
 - `assets/` — portrait photo, self-hosted reel videos (`reel-*.mp4`, compressed to ~1.4 Mbps 720p with faststart) and their poster images
 - `robots.txt`, `sitemap.xml`, `llms.txt` — crawler/SEO/AI-search discoverability files

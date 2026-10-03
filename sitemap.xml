@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-  <url><loc>https://tomcugc.com/</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://tomcugc.com/</loc><lastmod>2026-10-03</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
   <url>
     <loc>https://tomcugc.com/work.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <video:video>
@@ -434,14 +434,14 @@
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
-  <url><loc>https://tomcugc.com/about.html</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://tomcugc.com/services.html</loc><lastmod>2026-09-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tomcugc.com/pricing.html</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tomcugc.com/testimonials.html</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tomcugc.com/contact.html</loc><lastmod>2026-09-01</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tomcugc.com/apparel-ugc-creator.html</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tomcugc.com/fitness-ugc-creator.html</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tomcugc.com/grooming-skincare-ugc-creator.html</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tomcugc.com/tech-ugc-creator.html</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tomcugc.com/golf-ugc-creator.html</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tomcugc.com/about.html</loc><lastmod>2026-10-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tomcugc.com/services.html</loc><lastmod>2026-10-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tomcugc.com/pricing.html</loc><lastmod>2026-10-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tomcugc.com/testimonials.html</loc><lastmod>2026-10-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tomcugc.com/contact.html</loc><lastmod>2026-10-03</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tomcugc.com/apparel-ugc-creator.html</loc><lastmod>2026-10-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tomcugc.com/fitness-ugc-creator.html</loc><lastmod>2026-10-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tomcugc.com/grooming-skincare-ugc-creator.html</loc><lastmod>2026-10-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tomcugc.com/tech-ugc-creator.html</loc><lastmod>2026-10-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tomcugc.com/golf-ugc-creator.html</loc><lastmod>2026-10-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
